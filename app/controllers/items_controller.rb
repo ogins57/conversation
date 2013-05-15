@@ -19,6 +19,8 @@ class ItemsController < ApplicationController
 
     def edit
         @item = Item.find(params[:id])
+        @tweets = Tweet.all(:order =>'created_at DESC')
+        @new_tweet = Tweet.new
     end
 
 end

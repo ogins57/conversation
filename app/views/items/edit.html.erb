@@ -1,26 +1,33 @@
 # encoding: utf-8
 
 <table id="new_table" border="0">
-  <tr>
-    <th>タイトル</th>
-    <td><%= @item.title %></td>
-  </tr>
-
-  <tr>
-    <th>概要</th>
-    <td><%= @item.overview %></td>
-  </tr>
-
-  <tr>
-    <th>確度</th>
-    <td><%= @item.reliability %></td>
-  </tr>
-
-  <tr>
-    <th>&nbsp;</th>
-    <td style="text-align: center;">&nbsp;</td>
-  </tr>
-
+  <tr><td><font color="blue">タイトル</font></td></tr>
+</table>
+<table id="new_table" border="0">
+  <tr><td><%= @item.title %> [確度：<%= @item.reliability %>]</td></tr>
+  <tr><td>&nbsp;</td></tr>
 </table>
 
+<table id="new_table" border="0">
+  <tr><td><font color="blue">ボード</font></td></tr>
+</table>
+<table id="new_table" border="1" style="height:80px;">
+  <tr><td>※ここに画像（写真）のっけたりフリーハンドでいろいろ書けたりする。</td></tr>
+</table>
+<br>
 
+<table id="new_table" border="0">
+  <tr><td><font color="blue">概要</font></td></tr>
+</table>
+<table id="new_table" border="1" style="height:80px;">
+  <tr><td><%= @item.overview %></td></tr>
+</table>
+<br>
+
+<table id="new_table" border="0">
+  <tr><td><font color="blue">ニュースフィード</font></td></tr>
+</table>
+<table id="new_table" border="1" style="height:150px;">
+  <tr><td>&nbsp;</td></tr>
+</table>
+<br>
