@@ -1,0 +1,19 @@
+# encoding: utf-8
+
+<font size="7" color="blue">商談一覧</font>
+<br>
+<br>
+
+<% @items.each do |item| %>
+<table id="index_table" border="0">
+  <tr>
+    <td>
+      <%= link_to "* #{item.title} [確度：#{item.reliability}]", edit_item_path(item) %>
+    </td>
+  </tr>
+</table>
+<% end %>
+
+<br>
+<br>
+<%= link_to '新規商談登録', new_item_path  %>
